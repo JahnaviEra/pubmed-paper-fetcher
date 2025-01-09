@@ -1,0 +1,26 @@
+[project]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "A tool for fetching PubMed papers with pharmaceutical or biotech company affiliations."
+authors = [
+    {name = "Jahnavi"}
+]
+license = {text = "MIT"}
+readme = "../README.md"
+requires-python = ">=3.7,<3.12"  # Specifies supported Python versions
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"  # Specifies Python version range for your project
+numpy = ">=1.23,<2.0"  # Use numpy 1.23.x or higher for Python >=3.10
+requests = "*"  # Install the latest version of requests
+pandas = "*"  # Install the latest version of pandas
+argparse = "*"  # Install the latest version of argparse
+poetry = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+get-papers-list = "cli.main:main"  # Define script entry point
